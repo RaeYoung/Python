@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 # create a mapping of state to abbreviation
 states = {
 	'Oregon': 'OR',
@@ -6,6 +8,10 @@ states = {
 	'New York': 'NY',
 	'Michigan': 'MI'
 }
+
+# dict是无序的，想要有序的dict, 可使用collections.OrderedDict
+# from collections import OrderedDict
+# od = OrderedDict([('Oregon', 'OR'), ('Florida', 'FL')])
 
 # create a basic set of states and some cities in them
 cities = {
@@ -55,6 +61,9 @@ print '-' * 10
 # else default(None), If default is not given, then it defaults to None.
 state = states.get('Texas', None)
 
+print 'Oregon' in states
+
+# None, False, '', [], {}, () equals False
 if not state:
 	print "Sorry, no Texas."
 
